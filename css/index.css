@@ -1,0 +1,93 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imge/photo-1490237251747-4557595144b4.jpg);
+    background-position: center center;
+    background-size: cover;
+}.container {
+    width: 1100px;
+    height: 450px;
+    backdrop-filter:blur(10px);
+    position: relative;
+    text-align: center;
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    border-radius: 25px;}
+.container i {
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    color: #ff347f;
+}
+.container .shap {
+    position: absolute;
+    left: 85%;
+    top: 75%;
+    color: #005792;
+}
+.container img {
+    width:200px;
+    height: 200px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.container .information {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container button {
+    position: absolute;
+    bottom: 3%;
+    transform: translate(-50%, -50%);}
+.information p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    color: #fffefe;}
+.information h1 {
+    font-family: 'Lugrasimo', cursive;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #5fc9f3;}
+.information h1 span {
+    font-family: 'Lugrasimo', cursive;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color:white ;}
+.container button {
+    position: absolute;
+    bottom: -120px;
+
+    width: 25%;
+    border-top: none;
+    border-bottom: none;
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 253, 253);
+    padding: 20px;
+    background-color: transparent;
+    color: rgb(255, 249, 249);
+    font-size: 16px;
+    font-family: 'Lugrasimo', cursive;
+    border-radius: 25px;
+    transition: all 0.4s ease-in;}
+.container button:hover {
+    background-color: rgb(255, 255, 255);
+    color:#005792;
+    border-left: 6px solid #005792;
+    border-right: 6px solid #005792;}
