@@ -4,30 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lugrasimo&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
       rel="stylesheet"
     />
 
     <link
       rel="shortcut icon"
-      href="imge/icons8-quote-50.png"
+      href="imge/icons8-bookmark-69.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <title>Quotes</title>
+    <title>Travel Site</title>
   </head>
   <body>
-    <div class="container" id="demo">
-      <picture> <img src="imge/5768330.jpg" alt="" id="photo" /></picture>
-      <i class="fa-solid fa-quote-left fa-5x fa-flip-vertical"></i>
-      <i class="fa-solid fa-quote-right shap fa-5x fa-flip-vertical"></i>
-      <div class="information">
-        <p id="Quote">“Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.”</p>
-
-        <h1>Author:<span id="Author"> Bernard M. Baruch</span></h1>
+   
+    <div class="container position-relative">
+      <div
+        id="test"
+        class="direction vh-100 justify-content-center align-items-center position-absolute"
+      >
+        <div class="caption d-flex justify-content-center align-items-center">
+          <div class="item">
+            <div class="icon">
+              <i id="closeEl" class="fa-solid fa-rectangle-xmark fa-2x"></i>
+            </div>
+            <h1 class="text-center">Site Rules</h1>
+            <div class="iconsGroup">
+              <p>
+                <i class="fa-solid fa-triangle-exclamation"></i
+                >Site name must contain at least 3 characters<i class="fa-solid fa-triangle-exclamation"></i>
+              </p>
+              <p>
+                <i class="fa-solid fa-triangle-exclamation"></i> Site URL must be a valid one<i class="fa-solid fa-triangle-exclamation"></i>
+              </p>
+             
+            </div>
+          </div>
+        </div>
       </div>
-      <button type="button" onclick="changeQuote()">Change Quotes</button>
+      <div
+      id="war"
+      class="direction vh-100 justify-content-center align-items-center position-absolute"
+    >
+      <div class="caption d-flex justify-content-center align-items-center">
+        <div class="item">
+          <div class="icon">
+            <i id="closeElwar" class="fa-solid fa-rectangle-xmark fa-2x"></i>
+          </div>
+          <h1 class="text-center">Site Rules</h1>
+          <div class="iconsGroup">
+           
+            <p>
+              <i class="fa-solid fa-triangle-exclamation"></i> Don't Repeat site Name please<i class="fa-solid fa-triangle-exclamation"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <h1 class="text-center my-5">BookMarker</h1>
+      <div class="contentSite pt-5">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <form class="w-100">
+          <label for="siteName">
+            <i class="fa-solid fa-book-bookmark pe-2 pb-2"></i> Site Name</label
+          >
+          <input
+            type="text"
+            id="siteName"
+            class="form-control mb-3 border border-2 border-secondary-subtle"
+            placeholder="Bookmark Name"
+          />
+          <label for="siteUrl">
+            <i class="fa-solid fa-link pe-2 pb-2"></i> Site URL</label
+          >
+          <input
+            type="text"
+            id="siteUrl"
+            class="form-control mb-5 border border-2 border-secondary-subtle"
+            placeholder="Website URL"
+          />
+          <div class="d-flex w-100 justify-content-center">
+            <button
+              onclick="addSite()"
+              type="button"
+              class="mb-5 btn btn-primary px-5 text-center"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <table
+        class="table table-light table-bordered border-secondary-subtle mt-5 text-center table-striped table-hover shadow-lg"
+      >
+        <thead>
+          <th>Index</th>
+          <th>WebSite Name</th>
+          <th>Visit</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="demo"></tbody>
+      </table>
     </div>
     <script src="js/main.js"></script>
   </body>

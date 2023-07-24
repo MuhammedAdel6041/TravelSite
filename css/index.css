@@ -1,93 +1,90 @@
+:root {
+    --mainColor: #A0E7E5;
+    --secondColor: #78C1F3;
+    --borderColor: #2FA4FF;
+    --mainFont: 'Pacifico', cursive;
+    --secondFont: 'Righteous', cursive;
+}
+::selection {
+    color: #ffffff;
+    background-color: var(--secondColor);
+}
 body {
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    background-color: teal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../imge/photo-1490237251747-4557595144b4.jpg);
-    background-position: center center;
-    background-size: cover;
-}.container {
-    width: 1100px;
-    height: 450px;
-    backdrop-filter:blur(10px);
+    background-color: var(--mainColor) !important;
+}
+.container h1 {
+    font-family: var(--mainFont);
+    font-size: 3rem;
     position: relative;
+
+}
+.container h1:hover::before {
+    height: 70%;
+}
+.container h1::before {
+    content: "";
+    width: 21%;
+    height: 30%;
+    background-color: var(--borderColor);
+    position: absolute;
+    bottom: -2px;
+    z-index: -1;
+    transition: all 0.4s ease-in;
+}
+.contentSite {
+    border-bottom: 3px dotted var(--borderColor);
+    border-top: 3px dotted var(--borderColor);
+    margin-top: 6%;
+    box-shadow: 15px 20px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.contentSite h2 {
+    background-image:linear-gradient(90deg, rgba(5,191,219,1) 24%, rgba(5,191,219,1) 53%, rgba(39,225,193,1) 80%);
     text-align: center;
-    border-top: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;
-    border-radius: 25px;}
-.container i {
-    position: absolute;
-    left: 5%;
-    top: 8%;
-    color: #ff347f;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 2.5rem;
+    font-size: 25px;
+    font-family:var(--secondFont);
 }
-.container .shap {
-    position: absolute;
-    left: 85%;
-    top: 75%;
-    color: #005792;
+.direction{
+    
+    display: none;
+    width:100% ;
+    height: 100vh;
+  
+  
 }
-.container img {
-    width:200px;
-    height: 200px;
-    border: 3px solid #ffffff;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -50%);
+.caption{
+    width: 60%;
+    height: 50%;
+    background-color:#FBE7C6;
 }
+.caption h1{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image:linear-gradient(90deg, rgba(5,191,219,1) 24%, rgba(5,191,219,1) 53%, rgba(39,225,193,1) 80%);
+}
+.icon{
+    position: relative;
+}
+.caption .icon i{
+    position: absolute;
+    color: rgb(195, 179, 179);
+    top: 0px;
+    right:5%;
+    cursor: pointer;
+}
+.iconsGroup p{
+    font-size: 2rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image:linear-gradient(90deg, rgba(5,191,219,1) 24%, rgba(5,191,219,1) 53%, rgba(39,225,193,1) 80%);
+    text-align: center;
+    text-transform: capitalize;
 
-.container .information {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container button {
-    position: absolute;
-    bottom: 3%;
-    transform: translate(-50%, -50%);}
-.information p {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.4rem;
-    color: #fffefe;}
-.information h1 {
-    font-family: 'Lugrasimo', cursive;
-    font-weight: 500;
-    font-size: 1.8rem;
-    color: #5fc9f3;}
-.information h1 span {
-    font-family: 'Lugrasimo', cursive;
-    font-weight: 500;
-    font-size: 1.8rem;
-    color:white ;}
-.container button {
-    position: absolute;
-    bottom: -120px;
-
-    width: 25%;
-    border-top: none;
-    border-bottom: none;
-    border-left: 2px solid rgb(255, 255, 255);
-    border-right: 2px solid rgb(255, 253, 253);
-    padding: 20px;
-    background-color: transparent;
-    color: rgb(255, 249, 249);
-    font-size: 16px;
-    font-family: 'Lugrasimo', cursive;
-    border-radius: 25px;
-    transition: all 0.4s ease-in;}
-.container button:hover {
-    background-color: rgb(255, 255, 255);
-    color:#005792;
-    border-left: 6px solid #005792;
-    border-right: 6px solid #005792;}
